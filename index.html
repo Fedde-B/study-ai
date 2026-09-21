@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="brand-mark">✦</span><span>Study <b>AI</b></span></div>
+    <nav aria-label="Hoofdnavigatie">
+      <button class="nav-item active" data-page="dashboard"><span>⌂</span>Dashboard</button>
+      <button class="nav-item" data-page="subjects"><span>▦</span>Mijn vakken</button>
+      <button class="nav-item" data-page="flashcards"><span>◇</span>Flashcards</button>
+      <button class="nav-item" data-page="quizzes"><span>✓</span>Quizzen</button>
+      <button class="nav-item" data-page="tests"><span>▤</span>Oefentoetsen</button>
+      <button class="nav-item" data-page="studio"><span>✧</span>AI Studio</button>
+      <button class="nav-item" data-page="settings"><span>⚙</span>Instellingen</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="tip-card"><strong>Leer slimmer</strong><p>Gebruik korte sessies en herhaal moeilijke kaarten.</p></div><small>Lokale modus · privé</small></div>
+  </aside>
+  <main class="main-content">
+    <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="Menu">☰</button><div class="breadcrumb">Mijn leeromgeving</div><div class="top-actions"><button class="icon-button" data-page="settings" aria-label="Instellingen">⚙</button><div class="avatar">S</div></div></header>
+    <div id="page" class="page-container"></div>
+  </main>
+</div>
+<div id="modal-root"></div><div id="toast-root" class="toast-root" aria-live="polite"></div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
